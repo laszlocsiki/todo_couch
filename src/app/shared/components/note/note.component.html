@@ -1,0 +1,16 @@
+<div class="card card-stats">
+  <div class="card-header" data-background-color="orange">
+    <i class="material-icons">note</i>
+  </div>
+  <div class="card-content">
+    <p class="category">{{task.title}}</p>
+    <h3 class="card-title">{{task.description}}</h3>
+  </div>
+  <div class="card-footer">
+    <div class="stats">
+      <button *ngIf="task.completed == 0 && task.owner" mat-button (click)="closeTask()">Close</button>
+      <span style="text-align: right; float: right;">{{(task.completed != 0) ? 'Closed' : ''}}</span>
+    </div>
+  </div>
+</div>
+

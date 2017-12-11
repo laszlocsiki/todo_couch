@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>Hi</h1>
+<div mat-dialog-content>
+  <p>Give me the new title of TODO</p>
+  <mat-form-field>
+    <input matInput tabindex="1" [(ngModel)]="title">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="title" tabindex="2">Ok</button>
+  <button mat-button (click)="onClose()" tabindex="-1">Close</button>
+</div>

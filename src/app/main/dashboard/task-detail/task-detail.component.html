@@ -1,0 +1,22 @@
+<div class="row wrapper">
+  <div class="col-xl-12 header">
+    <h2 style="text-align: center">{{task.title}}</h2>
+  </div>
+  <div class="col-xl-12 body">
+    <mat-form-field  *ngIf="isEdit" style="width: 100%">
+      <textarea matInput cols="30" [(ngModel)]="description"  rows="10" placeholder="Textarea" style="width: 100%">{{description}}</textarea>
+    </mat-form-field>
+    <div class="description" *ngIf="!isEdit">
+      {{task.description}}
+    </div>
+  </div>
+  <div class="col-xl-12 footer">
+    <mat-toolbar>
+      <mat-toolbar-row>
+        <button mat-button (click)="isEdit ? save() : edit()">{{isEdit ? 'Save' : 'Edit'}}</button>
+        <button mat-button (click)="delete()">Delete</button>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </div>
+
+</div>

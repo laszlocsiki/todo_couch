@@ -1,0 +1,20 @@
+.header {
+  text-align: center;
+  padding: 5em;
+  background-color: tomato;
+  color: white;
+}
+
+.demo-tab-group {
+  border: 1px solid #e8e8e8;
+}
+
+.demo-tab-content {
+  padding: 16px;
+}
+.pad {
+  padding: 15px;
+}
+.main.row{
+  margin: 0;
+}
