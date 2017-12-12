@@ -50,6 +50,7 @@ export class TaskDetailComponent implements OnInit {
 
   delete() {
     this.listService.removeTask(this.task.id);
+    this.router.navigate(['/editor'])
   }
 
 }

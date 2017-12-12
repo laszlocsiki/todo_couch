@@ -19,8 +19,7 @@ export class EditorComponent implements OnInit {
     this.taskList = this.listService.getOwnedTasks();
     this.listService.taskListChanged.subscribe(
       (tasks: Task[]) => {
-        console.log(tasks);
-        this.taskList = tasks;
+        this.taskList = tasks.filter( obj => obj.owner === true);
       }
     );
     console.log(this.taskList);

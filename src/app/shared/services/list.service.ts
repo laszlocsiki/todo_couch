@@ -86,7 +86,9 @@ export class ListService {
       this.couchService.deleteTaskDocument(this._taskList[index]).subscribe(
         (response: Response) => {
           if (response['ok'] === true) {
-            this._taskList.slice(index, 1);
+            console.log(this._taskList[index]);
+            this._taskList.splice(index, 1);
+            console.log(this._taskList);
             this.taskListChanged.next(this._taskList);
           }
         }

@@ -23,7 +23,7 @@ export class CouchService {
     const body = {
       'title': task.title,
       'description': task.description,
-      'status': task.completed    // 1 or 0
+      'completed': task.completed    // 1 or 0
     };
     return this.http.post(this._COUCH_DB_ENDPOINT + '/' + this._currentDB + '/', body, {headers: headers});
   }
@@ -46,7 +46,7 @@ export class CouchService {
       '_rev' : task.rev,
       'title': task.title,
       'description': task.description,
-      'status': task.completed    // 1 or 0
+      'completed': task.completed    // 1 or 0
     };
     return this.http.put(this._COUCH_DB_ENDPOINT + '/' + this.currentDB + '/' + task.id + '/',
       body, {headers: headers});
